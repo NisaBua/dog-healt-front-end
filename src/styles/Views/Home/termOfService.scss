@@ -1,0 +1,20 @@
+.box-term {
+  display: flex;
+  flex-direction: row;
+  & .box-term-details {
+    // align-self: flex-end;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .box-term {
+    display: flex;
+    flex-direction: column;
+    & .box-term-details {
+      align-self: unset;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}

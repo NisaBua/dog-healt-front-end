@@ -1,0 +1,19 @@
+.box-introduction {
+  display: flex;
+  flex-direction: row;
+  & .box-introduction-details {
+    align-self: flex-end;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .box-introduction {
+    display: flex;
+    flex-direction: column;
+    & .box-introduction-details {
+      align-self: unset;
+      width: 100%;
+    }
+  }
+}
