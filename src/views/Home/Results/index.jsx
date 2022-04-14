@@ -47,7 +47,7 @@ function Results() {
           <PlusCircle color="#ffffff" />
         </Box>
       </Box>
-      <Box minH="540px" p={10} pt="10px" position="relative">
+      <Box minH="540px" pb='100px' p={10} pt="10px" position="relative">
         <Box>
           <Flex mt="20px" flexDirection="column" alignItems="center">
             <Heading fontSize="2xl">{t('common:result.title')}</Heading>
