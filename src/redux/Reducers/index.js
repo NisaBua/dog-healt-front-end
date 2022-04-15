@@ -14,6 +14,9 @@ import getProfile from './Profile/Get'
 import setProfile from './Profile/Set'
 import updateSymptom from './Symptom/Update'
 import updateDisease from './updateDisease'
+import requestResetPassword from './Password/Request'
+import setPassword from './Password/Set'
+
 
 
 export default combineReducers({
@@ -30,5 +33,7 @@ export default combineReducers({
   getProfile,
   setProfile,
   updateSymptom,
-  updateDisease
+  updateDisease,
+  setPassword,
+  requestResetPassword
 })

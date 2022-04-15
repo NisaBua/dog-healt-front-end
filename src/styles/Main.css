@@ -22,3 +22,6 @@ code {
     padding-inline: 4%;
   }
 }
+.swal2-container{
+  z-index:10000 !important;
+}
