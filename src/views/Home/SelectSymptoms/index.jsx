@@ -160,6 +160,8 @@ const Symptoms = ({
                     display="flex"
                     alignItems="center"
                     justifyContent="center"
+                    textTransform="none"
+                    whiteSpace="unset"
                   >
                     {question
                       ? lang === 'th'
