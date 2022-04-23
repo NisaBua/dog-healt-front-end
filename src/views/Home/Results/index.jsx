@@ -70,6 +70,8 @@ function Results() {
                 w="100%"
                 height="120px"
                 colorScheme="linkedin"
+                textTransform="none"
+                whiteSpace="unset"
               >
                 {lang === 'en'
                   ? getPredictDisease.lists?.data[0].diseaseEN

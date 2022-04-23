@@ -31,12 +31,12 @@ function Introduction() {
         {t('common:home.title')}
       </Heading>
       <Box p={10} minH="480px" className="box-introduction">
-        <Box w="80%" className="box-introduction-details" alignSelf="flex-end">
+        <Box display='flex' justifyContent='center'>
+          <Image loop="-1" width="360px" src={doctor} alt="" />
+        </Box>
+        <Box w="100%" className="box-introduction-details" alignSelf="flex-end">
           <Heading fontSize="lg">{t('common:home.descriptionName')}</Heading>{' '}
           {t('common:home.descriptionTitle')}
-        </Box>
-        <Box>
-          <Image loop="-1" width="400px" src={doctor} alt="" />
         </Box>
       </Box>
     </>
