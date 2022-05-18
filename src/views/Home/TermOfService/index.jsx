@@ -58,7 +58,6 @@ function TermOfService({ disableStep2, setDisableStep2 }) {
                 <Heading fontSize="md">
                   {t('common:termPage.two.title')}
                 </Heading>
-                In
                 {t('common:termPage.two.description')}
               </ListItem>
               <ListItem>
