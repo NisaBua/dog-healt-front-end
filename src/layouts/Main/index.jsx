@@ -41,7 +41,8 @@ import xxaProfile from '../../actions/Profile'
 
 const MainLayout = ({ children }) => {
   const dispatch = useDispatch()
-  const { t } = useTranslation(['common'])
+  const { t,i18n } = useTranslation(['common'])
+
   const lang = xxuLanguage.GetCurrentLanguage()
 
   const getProfile = useSelector(state => state.getProfile)
@@ -49,7 +50,8 @@ const MainLayout = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const handleChangeLanguage = lg => {
-    xxuLanguage.SetCurrentLanguage(lg)
+    // xxuLanguage.SetCurrentLanguage(lg)
+    i18n.changeLanguage(lg);
   }
 
   const checkCurrentLang = current => {
@@ -156,7 +158,7 @@ const MainLayout = ({ children }) => {
                 }}
                 color="#ffffff"
               >
-                Login
+                {t('common:menu.login')}
               </Link>
             )}
           </Center>
@@ -169,30 +171,6 @@ const MainLayout = ({ children }) => {
       >
         {children}
       </Box>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Profile</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </ModalBody>
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant="ghost">Secondary Action</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
       {/* Main Layout */}
     </Box>
   )

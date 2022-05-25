@@ -15,7 +15,8 @@
   "button": {
     "next": "next",
     "back": "back",
-    "finish": "finish"
+    "finish": "finish",
+    "cancel": "cancel"
   },
   "termPage": {
     "title": "Term of service!",
@@ -40,7 +41,7 @@
     "yes": "Yes",
     "no": "No",
     "success": "success",
-    "previous": "Previous",
+    "previous": "Previous Symptom",
     "success detail": "Prediction finished Please click on the ",
     "next": "Next",
     "result": "button to see the results."
@@ -56,7 +57,7 @@
   },
   "admin": {
     "disease": {
-      "edit":"Edit Disease",
+      "edit": "Edit Disease",
       "name": "Disease",
       "diseaseEN": "English Disease Name",
       "diseaseTH": "Thai Disease Name",
@@ -66,7 +67,7 @@
       "guidelinesTH": "Thai Treatment Guidelines"
     },
     "symptom": {
-      "edit":"Edit Symptom",
+      "edit": "Edit Symptom",
       "name": "Symptom",
       "symptomEN": "English Symptom Name",
       "symptomTH": "Thai Symptom Name",
@@ -76,8 +77,17 @@
     "save": "Save",
     "close": "Close"
   },
-  "menu":{
-    "admin":"Admin",
-    "logout":"Logout"
+  "menu": {
+    "admin": "Admin",
+    "logout": "Logout",
+    "login": "Login"
+  },
+  "login": {
+    "username": "Username",
+    "password": "Password",
+    "forgot": "Forgot Password",
+    "birth date": "Birth Date",
+    "confirm":"Confirm Password",
+    "reset":"Reset Password"
   }
 }

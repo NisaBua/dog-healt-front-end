@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 import loginAction from '../../actions/Login'
 import Swal from 'sweetalert2'
@@ -26,6 +27,7 @@ import {
 
 function LoginPage() {
   const dispatch = useDispatch()
+  const { t } = useTranslation(['common'])
 
   const login = useSelector(state => state.login)
   const requestResetPassword = useSelector(state => state.requestResetPassword)
@@ -109,7 +111,7 @@ function LoginPage() {
         minWidth={{ base: '320px', sm: '320px', md: '450px' }}
       >
         <FormControl>
-          <FormLabel htmlFor="email">Username</FormLabel>
+          <FormLabel htmlFor="email">{t('common:login.username')}</FormLabel>
           <Input
             onChange={e => {
               setUsername(e.target.value)
@@ -120,7 +122,7 @@ function LoginPage() {
           />
 
           <FormLabel mt="20px" htmlFor="email">
-            Password
+            {t('common:login.password')}
           </FormLabel>
           <Input
             value={password}
@@ -138,12 +140,12 @@ function LoginPage() {
               mt="20px"
               w="80%"
             >
-              Login
+              {t('common:menu.login')}
             </Button>
           </Center>
           <Center mt="5px">
             <Link onClick={onOpen} fontSize="sm" color="#1676D0" role="button">
-              Forgot Password
+            {t('common:login.forgot')}
             </Link>
           </Center>
         </FormControl>
@@ -151,12 +153,12 @@ function LoginPage() {
       <Modal isOpen={isOpen} onClose={onHideModal}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Forgot Password</ModalHeader>
+          <ModalHeader>{t('common:login.forgot')}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             {requestResetPassword.success ? (
               <>
-                <FormLabel htmlFor="email">Password</FormLabel>
+                <FormLabel htmlFor="email">{t('common:login.password')}</FormLabel>
                 <Input
                   onChange={e => {
                     setPasswordReset(e.target.value)
@@ -166,7 +168,7 @@ function LoginPage() {
                   type="password"
                 />
 
-                <FormLabel htmlFor="email">Confirm Password</FormLabel>
+                <FormLabel htmlFor="email">{t('common:login.confirm')}</FormLabel>
                 <Input
                   onChange={e => {
                     setConfirmPasswordReset(e.target.value)
@@ -191,13 +193,13 @@ function LoginPage() {
                     mt="20px"
                     w="80%"
                   >
-                    Reset Password
+                    {t('common:login.reset')}
                   </Button>
                 </Center>
               </>
             ) : (
               <>
-                <FormLabel htmlFor="email">Username</FormLabel>
+                <FormLabel htmlFor="email">{t('common:login.username')}</FormLabel>
                 <Input
                   onChange={e => {
                     setUsernameReset(e.target.value)
@@ -208,7 +210,7 @@ function LoginPage() {
                 />
 
                 <FormLabel mt="20px" htmlFor="email">
-                  Birth Date
+                {t('common:login.birth date')}
                 </FormLabel>
                 <Input
                   value={birthDate}
@@ -227,7 +229,7 @@ function LoginPage() {
                     mt="20px"
                     w="80%"
                   >
-                    Forgot Password
+                    {t('common:login.forgot')}
                   </Button>
                 </Center>
               </>

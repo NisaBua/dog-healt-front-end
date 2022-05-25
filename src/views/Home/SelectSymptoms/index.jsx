@@ -12,27 +12,14 @@ import {
   Center,
   Heading,
   Flex,
-  Spacer,
   Text,
-  Divider,
-  HStack,
   Button,
-  Select,
-  CheckboxGroup,
-  Checkbox,
-  Wrap,
-  WrapItem,
-  Stack,
   Badge,
   VStack,
-  Spinner,
-  List,
-  ListIcon,
-  ListItem
+  Spinner
 } from '@chakra-ui/react'
 
 // Actions
-import diseaseAction from '../../../actions/Disease'
 import xxuLanguage from '../../../utils/Language'
 import symptomAction from '../../../actions/Symptom'
 
@@ -92,9 +79,6 @@ const Symptoms = ({
   }, [getFirstSymptom])
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 1000)
     if (getNextSymptom.lists) {
       if (getNextSymptom.lists.data[0].predict_disease_result) {
         setSuccess(true)
@@ -103,15 +87,22 @@ const Symptoms = ({
         setSuccess(false)
         setQuestion(getNextSymptom.lists.data[0])
       }
+      setLoading(false)
     } else if (getNextSymptom.error) {
       setSuccess(false)
       setLoading(false)
+    }
+    if (!getNextSymptom.lists && listSymptom.length === 0) {
+      console.log('getNextSymptom', getNextSymptom)
+      if (getFirstSymptom.lists) {
+        setLoading(false)
+      }
     }
   }, [getNextSymptom])
 
   return (
     <>
-      <Box minH="480px" p={10}>
+      <Box minH="480px" p={10} position="relative">
         <Heading fontSize="lg">{t('common:selectPage.title')}</Heading>
         <Center mt="40px">
           <VStack width="-webkit-fill-available" gridGap="30px">
@@ -132,19 +123,6 @@ const Symptoms = ({
             {loading ? null : success === false ? (
               <>
                 <Flex position="relative" w="100%">
-                  {listSymptom.length > 0 ? (
-                    <Text
-                      onClick={handleRemoveSymptom}
-                      top="-10px"
-                      role="button"
-                      _hover={{ opacity: '0.6' }}
-                      left="0"
-                      position="absolute"
-                    >
-                      〱 {t('common:selectPage.previous')}
-                    </Text>
-                  ) : null}
-
                   <Badge
                     mt="20px"
                     w="100%"
@@ -189,6 +167,27 @@ const Symptoms = ({
                     {t('common:selectPage.yes')}
                   </Button>
                 </Flex>
+                <Box
+                  display="flex"
+                  px={10}
+                  pb={2}
+                  right="0"
+                  bottom="0"
+                  position="absolute"
+                  alignItems="flex-end"
+                >
+                  {listSymptom.length > 0 ? (
+                    <Box
+                      onClick={handleRemoveSymptom}
+                      role="button"
+                      _hover={{ opacity: '0.6' }}
+                      display="flex"
+                    >
+                      <img width="18px" src="/images/back.svg" alt="" />{' '}
+                      {t('common:selectPage.previous')}
+                    </Box>
+                  ) : null}
+                </Box>
               </>
             ) : (
               <>

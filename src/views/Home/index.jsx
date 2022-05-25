@@ -3,19 +3,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import '../../styles/Step.css'
 import '../../styles/Views/Home.scss'
-import Swal from 'sweetalert2'
 
 // Chakar ui
 import {
   Box,
-  Center,
-  Heading,
   Flex,
   Spacer,
-  Text,
   Divider,
-  HStack,
-  Image,
   Button
 } from '@chakra-ui/react'
 import Steps, { Step } from 'rc-steps'
@@ -31,7 +25,6 @@ import Results from './Results'
 
 // Actions
 import diseaseAction from '../../actions/Disease'
-import xxuLanguage from '../../utils/Language'
 import symptomAction from '../../actions/Symptom'
 import getPredictDiseaseAction from '../../actions/GetPredictDisease'
 
@@ -144,7 +137,9 @@ function HomePage() {
               colorScheme="gray"
               textTransform="uppercase"
             >
-              {t('common:button.back')}
+              {currentStep === 2
+                ? t('common:button.cancel')
+                : t('common:button.back')}
             </Button>
             <Spacer />
             <Button

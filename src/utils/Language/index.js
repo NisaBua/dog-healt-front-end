@@ -7,7 +7,7 @@ const xxuLanguage = {
   },
   SetCurrentLanguage: lang => {
     localStorage.setItem('i18nextLng', lang.toLowerCase())
-    window.location.reload()
+    // window.location.reload()
   }
 }
 

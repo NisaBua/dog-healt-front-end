@@ -10,6 +10,7 @@ const availableLanguages = ['en', 'th']
 const initLanguage = localStorage.getItem('i18nextLng')
   ? localStorage.getItem('i18nextLng')
   : 'th'
+
 const options = {
   // order and from where user language should be detected
   order: [
