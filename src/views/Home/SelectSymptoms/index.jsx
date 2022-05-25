@@ -192,13 +192,13 @@ const Symptoms = ({
             ) : (
               <>
                 <Flex
-                  position="relative"
+                  // position="relative"
                   flexDirection="column"
                   alignItems="center"
                   rowGap="30px"
                   width="100%"
                 >
-                  <Text
+                  {/* <Text
                     onClick={handleRemoveSymptom}
                     top="-10px"
                     role="button"
@@ -207,7 +207,7 @@ const Symptoms = ({
                     position="absolute"
                   >
                     〱 {t('common:selectPage.previous')}
-                  </Text>
+                  </Text> */}
                   <Badge
                     mt="20px"
                     w="100%"
@@ -232,6 +232,25 @@ const Symptoms = ({
                     </span>{' '}
                     {t('common:selectPage.result')}
                   </Text>
+                  <Box
+                    display="flex"
+                    px={10}
+                    pb={2}
+                    right="0"
+                    bottom="0"
+                    position="absolute"
+                    alignItems="flex-end"
+                  >
+                    <Box
+                      onClick={handleRemoveSymptom}
+                      role="button"
+                      _hover={{ opacity: '0.6' }}
+                      display="flex"
+                    >
+                      <img width="18px" src="/images/back.svg" alt="" />{' '}
+                      {t('common:selectPage.previous')}
+                    </Box>
+                  </Box>
                 </Flex>
               </>
             )}
