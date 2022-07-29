@@ -1,93 +1,95 @@
 {
-  "welcome": "Welcome to React Typescript.",
-  "home": {
-    "title": "Welcome to the Canine Diagnosis System",
-    "descriptionName": "WARNING",
-    "descriptionTitle": "In cases of illness in dogs, symptoms can be more complex than systemic diagnoses. Please consult a medical professional. If there are symptoms of concern Our service is not a doctor's diagnosis. But it's just a preliminary information."
-  },
-  "step": {
-    "introduction": "Introduction",
-    "term of service": "Term of service",
-    "symptoms": "Symptoms",
-    "results": "Results",
-    "summary": "Summary of symptoms"
-  },
-  "button": {
-    "next": "next",
-    "back": "back",
-    "finish": "finish",
-    "cancel": "cancel"
-  },
-  "termPage": {
-    "title": "Term of service!",
-    "description": "Before using the checkup, please read Terms of Service. Remember that:",
-    "one": {
-      "title": "Checkup is not a diagnosis.",
-      "description": "Checkup is for informational purposes and is not a qualified medical opinion."
+    "welcome": "Welcome to React Typescript.",
+    "home": {
+        "title": "Welcome to the Canine Diagnosis System",
+        "descriptionName": "WARNING",
+        "descriptionTitle": "In cases of illness in dogs, symptoms can be more complex than systemic diagnoses. Please consult a medical professional. If there are symptoms of concern Our service is not a doctor's diagnosis. But it's just a preliminary information."
     },
-    "two": {
-      "title": "Do not use in emergencies.",
-      "description": "In case of health emergency, call your local emergency number immediately."
+    "step": {
+        "introduction": "Introduction",
+        "term of service": "Term of service",
+        "symptoms": "Symptoms",
+        "results": "Results",
+        "summary": "Summary of symptoms"
     },
-    "three": {
-      "title": "Your dog's data is safe.",
-      "description": "The dog information you provide will not be shared with anyone."
+    "button": {
+        "next": "next",
+        "back": "back",
+        "finish": "finish",
+        "cancel": "cancel"
     },
-    "check1": "I read and accept Terms of Service and Privacy Policy.",
-    "check2": "I agree to the processing of my health information for the purpose of performing the interview."
-  },
-  "selectPage": {
-    "title": "Please answer, according to your dog's condition",
-    "yes": "Yes",
-    "no": "No",
-    "success": "success",
-    "previous": "Previous Symptom",
-    "success detail": "Prediction finished Please click on the ",
-    "next": "Next",
-    "result": "button to see the results."
-  },
-  "summary": {
-    "title": "Your dog has the following symptoms."
-  },
-  "result": {
-    "title": "Related diseases",
-    "subTitle": "The above symptoms of the dog are presumed to be a disease.",
-    "symptom": "Detailed symptoms of the disease",
-    "guidelines": "Guidelines for treatment"
-  },
-  "admin": {
-    "disease": {
-      "edit": "Edit Disease",
-      "name": "Disease",
-      "diseaseEN": "English Disease Name",
-      "diseaseTH": "Thai Disease Name",
-      "detailEN": "English Symptom Details",
-      "detailTH": "Thai Symptom Details",
-      "guidelinesEN": "English Treatment Guidelines",
-      "guidelinesTH": "Thai Treatment Guidelines"
+    "termPage": {
+        "title": "Term of service!",
+        "description": "Before using the checkup, please read Terms of Service. Remember that:",
+        "one": {
+            "title": "Checkup is not a diagnosis.",
+            "description": "Checkup is for informational purposes and is not a qualified medical opinion."
+        },
+        "two": {
+            "title": "Do not use in emergencies.",
+            "description": "In case of health emergency, call your local emergency number immediately."
+        },
+        "three": {
+            "title": "Your dog's data is safe.",
+            "description": "The dog information you provide will not be shared with anyone."
+        },
+        "check1": "I read and accept Terms of Service and Privacy Policy.",
+        "check2": "I agree to the processing of my health information for the purpose of performing the interview."
     },
-    "symptom": {
-      "edit": "Edit Symptom",
-      "name": "Symptom",
-      "symptomEN": "English Symptom Name",
-      "symptomTH": "Thai Symptom Name",
-      "questionEN": "English Question",
-      "questionTH": "Thai Question"
+    "selectPage": {
+        "title": "Please answer, according to your dog's condition",
+        "yes": "Yes",
+        "no": "No",
+        "success": "success",
+        "previous": "Previous Symptom",
+        "success detail": "Prediction finished Please click on the ",
+        "next": "Next",
+        "result": "button to see the results."
     },
-    "save": "Save",
-    "close": "Close"
-  },
-  "menu": {
-    "admin": "Admin",
-    "logout": "Logout",
-    "login": "Login"
-  },
-  "login": {
-    "username": "Username",
-    "password": "Password",
-    "forgot": "Forgot Password",
-    "birth date": "Birth Date",
-    "confirm":"Confirm Password",
-    "reset":"Reset Password"
-  }
+    "summary": {
+        "title": "Your dog has the following symptoms."
+    },
+    "result": {
+        "title": "Related diseases",
+        "subTitle": "The above symptoms of the dog are presumed to be a disease.",
+        "symptom": "Detailed symptoms of the disease",
+        "guidelines": "Guidelines for treatment"
+    },
+    "admin": {
+        "disease": {
+            "edit": "Edit Disease",
+            "name": "Disease",
+            "diseaseEN": "English Disease Name",
+            "diseaseTH": "Thai Disease Name",
+            "detailEN": "English Symptom Details",
+            "detailTH": "Thai Symptom Details",
+            "guidelinesEN": "English Treatment Guidelines",
+            "guidelinesTH": "Thai Treatment Guidelines"
+        },
+        "symptom": {
+            "edit": "Edit Symptom",
+            "name": "Symptom",
+            "symptomEN": "English Symptom Name",
+            "symptomTH": "Thai Symptom Name",
+            "questionEN": "English Question",
+            "questionTH": "Thai Question",
+            "detailEN": "English Detail",
+            "detailTH": "Thai Detail"
+        },
+        "save": "Save",
+        "close": "Close"
+    },
+    "menu": {
+        "admin": "Admin",
+        "logout": "Logout",
+        "login": "Login"
+    },
+    "login": {
+        "username": "Username",
+        "password": "Password",
+        "forgot": "Forgot Password",
+        "birth date": "Birth Date",
+        "confirm": "Confirm Password",
+        "reset": "Reset Password"
+    }
 }

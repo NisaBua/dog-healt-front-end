@@ -122,7 +122,7 @@ const Symptoms = ({
             </Box>
             {loading ? null : success === false ? (
               <>
-                <Flex position="relative" w="100%">
+                <Flex position="relative" w="100%" direction="column">
                   <Badge
                     mt="20px"
                     w="100%"
@@ -148,6 +148,28 @@ const Symptoms = ({
                       : null}{' '}
                     ?
                   </Badge>
+                  { 
+                    (question?.detail_TH||question?.detail_EN)&&<Badge
+                    mt="20px"
+                    w="100%"
+                    minH="60px"
+                    borderRadius="8px"
+                    variant="solid"
+                    padding="8px 20px"
+                    fontSize="sm"
+                    color="#666"
+                    // colorScheme="twitter"
+                    backgroundColor="#f2f5f7"
+                    textTransform="none"
+                    whiteSpace="unset"
+                  >
+                    {question
+                      ? lang === 'th'
+                        ? question.detail_TH
+                        : question.detail_EN
+                      : null}{' '}
+                  </Badge>
+                  }
                 </Flex>
 
                 <Flex gridGap="20px">

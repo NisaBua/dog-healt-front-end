@@ -38,6 +38,8 @@ function Symptom() {
   const [symptomNameTH, setSymptomNameTH] = useState('')
   const [questionTH, setQuestionTH] = useState('')
   const [questionEN, setQuestionEN] = useState('')
+  const [detailEN, setDetailEN] = useState('')
+  const [detailTH, setDetailTH] = useState('')
   const [symptomNumber, setSymptomNumber] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [enableButton, setEnableButton] = useState(false)
@@ -51,6 +53,8 @@ function Symptom() {
     setSymptomNameTH(disease.symptomNameTH)
     setQuestionTH(disease.question_TH ?? '')
     setQuestionEN(disease.question_EN ?? '')
+    setDetailTH(disease.detail_TH ?? '')
+    setDetailEN(disease.detail_EN ?? '')
     setSymptomNumber(disease.symptomNumber)
   }
 
@@ -62,7 +66,10 @@ function Symptom() {
         questionEN,
         symptomNameEN,
         symptomNameTH,
-        symptomNumber
+        symptomNumber,
+        detailEN,
+        detailTH
+        
       )
     )
   }
@@ -84,7 +91,7 @@ function Symptom() {
   }, [updateSymptom])
 
   useEffect(() => {
-    if (!questionTH || !questionEN || !symptomNameEN || !symptomNameTH || !symptomNumber) {
+    if (!questionTH || !questionEN || !symptomNameEN || !symptomNameTH || !symptomNumber ) {
       setEnableButton(true)
       console.log('questionEN',questionEN);
     }else{
@@ -172,6 +179,22 @@ function Symptom() {
                 value={questionTH}
                 onChange={e => {
                   setQuestionTH(e.target.value)
+                }}
+                type="text"
+              />
+              <FormLabel mt="10px">{t('common:admin.symptom.detailEN')}</FormLabel>
+              <Textarea
+                value={detailEN}
+                onChange={e => {
+                  setDetailEN(e.target.value)
+                }}
+                type="text"
+              />
+              <FormLabel mt="10px">{t('common:admin.symptom.detailTH')}</FormLabel>
+              <Textarea
+                value={detailTH}
+                onChange={e => {
+                  setDetailTH(e.target.value)
                 }}
                 type="text"
               />
