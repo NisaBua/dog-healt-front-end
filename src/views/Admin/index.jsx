@@ -16,14 +16,11 @@ function AdminPage() {
 
   return (
     <>
-      <Tabs align="center">
+      <Tabs align="left" variant='enclosed' >
         <TabList>
-          <Tab _focus={{ boxShadow: 'none' }}>
-            <Heading fontSize="lg">{t('common:admin:disease.name')}</Heading>
-          </Tab>
-          <Tab _focus={{ boxShadow: 'none' }}>
-            <Heading fontSize="lg">{t('common:admin:symptom.name')}</Heading>
-          </Tab>
+          <Tab _selected={{ color: 'white', bg: 'blue.500'  }}>{t('common:admin:disease.name')}</Tab>
+         
+          <Tab _selected={{ color: 'white', bg: 'blue.500'   }}>{t('common:admin:symptom.name')}</Tab>
         </TabList>
         <TabPanels>
           <TabPanel borderBottomRadius="30px" minH="500px" bg="#ffffff">
