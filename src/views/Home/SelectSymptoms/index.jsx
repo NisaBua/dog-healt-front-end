@@ -217,7 +217,7 @@ const Symptoms = ({
                   // position="relative"
                   flexDirection="column"
                   alignItems="center"
-                  rowGap="30px"
+                  gridRowGap="30px"
                   width="100%"
                 >
                   {/* <Text

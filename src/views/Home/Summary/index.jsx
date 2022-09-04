@@ -51,7 +51,7 @@ function Summary(listSymptom) {
                     return (
                       <ListItem
                         display="flex"
-                        columnGap="8px"
+                        gridColumnGap="8px"
                         key={`name-${index}`}
                       >
                         {item.status ? (

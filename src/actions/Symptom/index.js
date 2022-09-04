@@ -29,7 +29,7 @@ import symptomService from '../../services/Symptom'
 import handleResponse from '../../utils/Response'
 
 const symptomAction = {
-    GetSymptom: () => async(dispatch, getState) => {
+    GetSymptom: () => async (dispatch, getState) => {
         const response = await symptomService.GetSymptom()
         if (response.status === 200) {
             handleResponse.Success({
@@ -54,38 +54,38 @@ const symptomAction = {
     },
     UpdateSymptom:
         (question_TH, question_EN, symptomNameEN, symptomNameTH, symptomNumber, detailEN, detailTH) =>
-        async dispatch => {
-            const response = await symptomService.UpdateSymptom(
-                question_TH,
-                question_EN,
-                symptomNameEN,
-                symptomNameTH,
-                symptomNumber,
-                detailEN,
-                detailTH
-            )
-            if (response.status === 200) {
-                handleResponse.Success({
-                    type: UPDATE_SYMPTOM_SUCCESS,
-                    dispatch,
-                    payload: response
-                })
-            } else {
-                handleResponse.Error({
-                    type: UPDATE_SYMPTOM_FAIL,
-                    errorPage: true,
-                    dispatch,
-                    error: response.error
-                })
-            }
-        },
+            async dispatch => {
+                const response = await symptomService.UpdateSymptom(
+                    question_TH,
+                    question_EN,
+                    symptomNameEN,
+                    symptomNameTH,
+                    symptomNumber,
+                    detailEN,
+                    detailTH
+                )
+                if (response.status === 200) {
+                    handleResponse.Success({
+                        type: UPDATE_SYMPTOM_SUCCESS,
+                        dispatch,
+                        payload: response
+                    })
+                } else {
+                    handleResponse.Error({
+                        type: UPDATE_SYMPTOM_FAIL,
+                        errorPage: true,
+                        dispatch,
+                        error: response.error
+                    })
+                }
+            },
     ClearUpdateSymptom: () => async dispatch => {
         // Clear data of example in Redux
         dispatch({
             type: UPDATE_SYMPTOM_CLEAR_DATA
         })
     },
-    GetFirstSymptom: () => async(dispatch, getState) => {
+    GetFirstSymptom: () => async (dispatch, getState) => {
         dispatch({
             type: GET_FIRST_SYMPTOM_CLEAR_DATA
         })
@@ -106,12 +106,12 @@ const symptomAction = {
         }
     },
     GetNextSymptom:
-        (previousSymptom, previousStatus) => async(dispatch, getState) => {
+        (previousPredict, previousStatus) => async (dispatch, getState) => {
             dispatch({
                 type: GET_NEXT_SYMPTOM_CLEAR_DATA
             })
             const response = await symptomService.GetNextSymptom(
-                previousSymptom,
+                previousPredict,
                 previousStatus
             )
             if (response.status === 200) {
