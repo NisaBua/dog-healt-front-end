@@ -86,7 +86,6 @@ function AddAdmin() {
             onChange={e => setLastName(e.target.value)}
             placeholder={t('common:addAdmin.lastname')}
           />
-
           <FormLabel mt="20px" htmlFor="email">
             {t('common:addAdmin.birth date')}
           </FormLabel>
@@ -97,7 +96,6 @@ function AddAdmin() {
             }}
             type="date"
           />
-
           <FormLabel mt="20px">{t('common:addAdmin.username')}</FormLabel>
           <Input
             type="text"
@@ -105,7 +103,6 @@ function AddAdmin() {
             onChange={e => setUsername(e.target.value)}
             placeholder={t('common:addAdmin.username')}
           />
-
           <FormLabel mt="20px">{t('common:addAdmin.password')}</FormLabel>
           <Input
             type="password"
