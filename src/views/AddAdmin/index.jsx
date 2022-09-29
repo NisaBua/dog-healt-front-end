@@ -76,7 +76,6 @@ function AddAdmin() {
             onChange={e => setFirstName(e.target.value)}
             placeholder={t('common:addAdmin.firstname')}
           />
-
           <FormLabel mt="20px" htmlFor="email">
             {t('common:addAdmin.lastname')}
           </FormLabel>
