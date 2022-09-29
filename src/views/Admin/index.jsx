@@ -2,6 +2,7 @@ import React from 'react'
 import Disease from 'views/Admin/Disease'
 import Symptom from 'views/Admin/Symptom'
 import { useTranslation } from 'react-i18next'
+
 import {
   Tabs,
   TabList,
@@ -19,7 +20,6 @@ function AdminPage() {
       <Tabs align="left" variant='enclosed' >
         <TabList>
           <Tab _selected={{ color: 'white', bg: 'blue.500'  }}>{t('common:admin:disease.name')}</Tab>
-         
           <Tab _selected={{ color: 'white', bg: 'blue.500'   }}>{t('common:admin:symptom.name')}</Tab>
         </TabList>
         <TabPanels>

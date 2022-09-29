@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
+
 // Chakar ui
 import {
   Box,
@@ -41,7 +42,7 @@ import xxaProfile from '../../actions/Profile'
 
 const MainLayout = ({ children }) => {
   const dispatch = useDispatch()
-  const { t,i18n } = useTranslation(['common'])
+  const { t, i18n } = useTranslation(['common'])
 
   const lang = xxuLanguage.GetCurrentLanguage()
 
@@ -51,7 +52,7 @@ const MainLayout = ({ children }) => {
 
   const handleChangeLanguage = lg => {
     // xxuLanguage.SetCurrentLanguage(lg)
-    i18n.changeLanguage(lg);
+    i18n.changeLanguage(lg)
   }
 
   const checkCurrentLang = current => {
@@ -74,6 +75,10 @@ const MainLayout = ({ children }) => {
 
   const handleAdmin = () => {
     window.location.href = '/admin'
+  }
+
+  const handleAddAdmin = () => {
+    window.location.href = '/AddAdmin'
   }
 
   useEffect(() => {
@@ -114,7 +119,7 @@ const MainLayout = ({ children }) => {
               cursor="pointer"
               color="#fff"
               _hover={{
-                textDecoration:'underline'
+                textDecoration: 'underline'
               }}
               textDecoration={checkCurrentLang('th') ? 'underline' : 'unset'}
             >
@@ -128,13 +133,15 @@ const MainLayout = ({ children }) => {
               cursor="pointer"
               color="#fff"
               _hover={{
-                textDecoration:'underline'
+                textDecoration: 'underline'
               }}
               textDecoration={checkCurrentLang('en') ? 'underline' : 'unset'}
-
             >
               EN
             </Text>
+            <a href="/Mypdf.pdf" download={true} className="link-download">
+              {t('common:menu.operatingInstructions.')}
+            </a>
           </HStack>
           <Center ml="10px">
             {getProfile.lists ? (
@@ -145,6 +152,9 @@ const MainLayout = ({ children }) => {
                 <MenuList>
                   <MenuItem onClick={handleAdmin}>
                     {t('common:menu.admin')}
+                  </MenuItem>
+                  <MenuItem onClick={handleAddAdmin}>
+                    {t('common:menu.addAdmin')}
                   </MenuItem>
                   <MenuItem onClick={handleLogout}>
                     {t('common:menu.logout')}

@@ -3,7 +3,7 @@
     "home": {
         "title": "Welcome to the Canine Diagnosis System",
         "descriptionName": "WARNING",
-        "descriptionTitle": "In cases of illness in dogs, symptoms can be more complex than systemic diagnoses. Please consult a medical professional. If there are symptoms of concern Our service is not a doctor's diagnosis. But it's just a preliminary information."
+        "descriptionTitle": "Illness cases in dogs can be more complicated than systemic diagnoses. Please consult a medical professional. If there are symptoms of concern Our service is not a doctor's diagnosis. But it's just a preliminary information."
     },
     "step": {
         "introduction": "Introduction",
@@ -20,19 +20,23 @@
     },
     "termPage": {
         "title": "Term of service!",
-        "description": "Before using the checkup, please read Terms of Service. Remember that:",
+        "description": "Before using the check Please read the terms of service.",
         "one": {
+            "title": "Please don't forget"
+        },
+        "two": {
             "title": "Checkup is not a diagnosis.",
             "description": "Checkup is for informational purposes and is not a qualified medical opinion."
         },
-        "two": {
+        "three": {
             "title": "Do not use in emergencies.",
             "description": "In case of health emergency, call your local emergency number immediately."
         },
-        "three": {
+        "four": {
             "title": "Your dog's data is safe.",
             "description": "The dog information you provide will not be shared with anyone."
         },
+
         "check1": "I read and accept Terms of Service and Privacy Policy.",
         "check2": "I agree to the processing of my health information for the purpose of performing the interview."
     },
@@ -82,7 +86,9 @@
     "menu": {
         "admin": "Admin",
         "logout": "Logout",
-        "login": "Login"
+        "login": "Login",
+        "addAdmin": "AddAdmin",
+        "operatingInstructions.": "Operating Instructions."
     },
     "login": {
         "username": "Username",
@@ -91,5 +97,14 @@
         "birth date": "Birth Date",
         "confirm": "Confirm Password",
         "reset": "Reset Password"
+    },
+    "addAdmin": {
+        "firstname": "Firstname",
+        "lastname": "Lastname",
+        "birth date": "Birth Date",
+        "username": "Username",
+        "password": "Password",
+        "save": "Save",
+        "cancel": "Cancel"
     }
 }

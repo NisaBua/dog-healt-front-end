@@ -46,14 +46,9 @@ function TermOfService({ disableStep2, setDisableStep2 }) {
           <Box mt="30px">
             <Text>{t('common:termPage.description')}</Text>
           </Box>
+          <Heading fontSize="md">{t('common:termPage.one.title')}</Heading>
           <Box mt="20px">
-            <UnorderedList spacing='10px'>
-              <ListItem>
-                <Heading fontSize="md">
-                  {t('common:termPage.one.title')}
-                </Heading>
-                {t('common:termPage.one.description')}
-              </ListItem>
+            <UnorderedList spacing="10px">
               <ListItem>
                 <Heading fontSize="md">
                   {t('common:termPage.two.title')}
@@ -61,8 +56,15 @@ function TermOfService({ disableStep2, setDisableStep2 }) {
                 {t('common:termPage.two.description')}
               </ListItem>
               <ListItem>
-                <Heading fontSize="md">{t('common:termPage.three.title')}</Heading>
-                {t('common:termPage.three.title')}
+                <Heading fontSize="md">
+                  {t('common:termPage.three.title')}
+                </Heading>
+                {t('common:termPage.three.description')}
+              </ListItem>
+              <ListItem>
+                <Heading fontSize="md">
+                  {t('common:termPage.four.title')}
+                </Heading>
               </ListItem>
             </UnorderedList>
           </Box>

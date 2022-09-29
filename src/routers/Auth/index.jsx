@@ -3,6 +3,7 @@ import Home from '../../views/Home'
 import LoginPage from '../../views/Login'
 
 
+
 const authRouter = [
   {
     path: '/login',
