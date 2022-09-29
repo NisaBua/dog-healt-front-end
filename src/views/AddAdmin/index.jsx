@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-
+import addAdmin from '../../services/AddAdmin'
 import {
   FormControl,
   FormLabel,
@@ -24,16 +24,29 @@ import {
 } from '@chakra-ui/react'
 import { EditIcon } from '@chakra-ui/icons'
 import LoadingPage from 'components/loadingPage'
+import handleResponse from 'utils/Response'
+import Swal from 'sweetalert2'
 
 function AddAdmin() {
   const { t } = useTranslation(['common'])
 
-  const [nametitle, setNameTitle] = useState('')
-  const [firstname, setFirstName] = useState('')
-  const [lastname, setLastName] = useState('')
+  const [nameTitle, setNameTitle] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
   const [birthDate, setBirthDate] = useState('')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const handleSubmit = async () => {
+    let data = { nameTitle, firstName, lastName, birthDate, username, password }
+    const response = await addAdmin.addAdmin(data)
+    if (response.lists.success) {
+      Swal.fire('', response.lists.message, 'success').then(() => {
+        window.location.href = '/admin'
+      })
+    } else {
+      Swal.fire('', response.lists.message, 'error').then(() => {})
+    }
+  }
 
   return (
     <Center mt="10px">
@@ -45,14 +58,34 @@ function AddAdmin() {
       >
         <FormControl>
           <FormLabel htmlFor="email">
+            {t('common:addAdmin.nametitle')}
+          </FormLabel>
+          <Input
+            type="text"
+            value={nameTitle}
+            onChange={e => setNameTitle(e.target.value)}
+            placeholder={t('common:addAdmin.nametitle')}
+          />
+
+          <FormLabel mt="20px" htmlFor="email">
             {t('common:addAdmin.firstname')}
           </FormLabel>
-          <Input placeholder={t('common:addAdmin.firstname')} />
+          <Input
+            type="text"
+            value={firstName}
+            onChange={e => setFirstName(e.target.value)}
+            placeholder={t('common:addAdmin.firstname')}
+          />
 
           <FormLabel mt="20px" htmlFor="email">
             {t('common:addAdmin.lastname')}
           </FormLabel>
-          <Input placeholder={t('common:addAdmin.lastname')} />
+          <Input
+            type="text"
+            value={lastName}
+            onChange={e => setLastName(e.target.value)}
+            placeholder={t('common:addAdmin.lastname')}
+          />
 
           <FormLabel mt="20px" htmlFor="email">
             {t('common:addAdmin.birth date')}
@@ -62,15 +95,24 @@ function AddAdmin() {
             onChange={e => {
               setBirthDate(e.target.value)
             }}
-            id="password"
             type="date"
           />
 
           <FormLabel mt="20px">{t('common:addAdmin.username')}</FormLabel>
-          <Input placeholder={t('common:addAdmin.username')} />
+          <Input
+            type="text"
+            value={username}
+            onChange={e => setUsername(e.target.value)}
+            placeholder={t('common:addAdmin.username')}
+          />
 
           <FormLabel mt="20px">{t('common:addAdmin.password')}</FormLabel>
-          <Input placeholder={t('common:addAdmin.password')} />
+          <Input
+            type="password"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            placeholder={t('common:addAdmin.password')}
+          />
 
           <Center>
             <Stack
@@ -80,7 +122,7 @@ function AddAdmin() {
               mt="20px"
               htmlFor="email"
             >
-              <Button colorScheme="blue" variant="solid">
+              <Button colorScheme="blue" variant="solid" onClick={handleSubmit}>
                 {t('common:addAdmin.save')}
               </Button>
 

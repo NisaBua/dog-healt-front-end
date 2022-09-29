@@ -99,6 +99,7 @@
         "reset": "Reset Password"
     },
     "addAdmin": {
+        "nametitle": "Name Title",
         "firstname": "Firstname",
         "lastname": "Lastname",
         "birth date": "Birth Date",

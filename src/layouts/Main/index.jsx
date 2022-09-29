@@ -139,10 +139,15 @@ const MainLayout = ({ children }) => {
             >
               EN
             </Text>
-            <a href="/Mypdf.pdf" download={true} className="link-download">
+            <a
+              href="/คู่มือการใช้งาน.pdf"
+              download={true}
+              className="link-download"
+            >
               {t('common:menu.operatingInstructions.')}
             </a>
           </HStack>
+
           <Center ml="10px">
             {getProfile.lists ? (
               <Menu>

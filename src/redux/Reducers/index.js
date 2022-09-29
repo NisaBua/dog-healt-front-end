@@ -17,23 +17,21 @@ import updateDisease from './updateDisease'
 import requestResetPassword from './Password/Request'
 import setPassword from './Password/Set'
 
-
-
 export default combineReducers({
-  post,
-  todo,
-  getDisease,
-  getSymptom,
-  getClassSymptom,
-  predictDisease,
-  getFirstSymptom,
-  getNextSymptom,
-  getPredictDisease,
-  login,
-  getProfile,
-  setProfile,
-  updateSymptom,
-  updateDisease,
-  setPassword,
-  requestResetPassword
+    post,
+    todo,
+    getDisease,
+    getSymptom,
+    getClassSymptom,
+    predictDisease,
+    getFirstSymptom,
+    getNextSymptom,
+    getPredictDisease,
+    login,
+    getProfile,
+    setProfile,
+    updateSymptom,
+    updateDisease,
+    setPassword,
+    requestResetPassword
 })

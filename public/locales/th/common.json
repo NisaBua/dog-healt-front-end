@@ -96,6 +96,7 @@
         "reset": "รีเซ็ตรหัสผ่าน"
     },
     "addAdmin": {
+        "nametitle": "คำนำหน้า",
         "firstname": "ชื่อจริง",
         "lastname": "นามสกุล",
         "birth date": "วันเกิด",
